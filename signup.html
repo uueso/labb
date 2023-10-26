@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mef</title>
+    <link rel="shortcut icon" href="images/Vector.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="container">
+            <nav id="nav" class="nav">
+                
+                <div class="logo">
+                    <a href="index.html"><img src="images/Vector.png" alt=""></a>
+                </div>
+                    
+                <div class="nav-content">
+                    
+                    <a class="nav-links" href="index.html">Главная</a>
+                    <a class="nav-links" href="#">Вакансии</a>
+                    <a class="nav-links" href="#">Обмен</a>
+                    <a class="nav-links" href="#">
+                        Каталог 
+                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49805 4.37289L1.49304 0.540894C1.26007 0.322952 0.89801 0.322952 0.665039 0.540894L0.314087 0.8769C0.204956 0.979691 0.143066 1.12297 0.143066 1.2729C0.143066 1.42282 0.204956 1.5661 0.314087 1.6689L5.08209 6.2319C5.31622 6.44975 5.67889 6.44975 5.91309 6.2319L10.6771 1.6739C10.7862 1.57111 10.8481 1.42783 10.8481 1.2779C10.8481 1.12798 10.7862 0.984695 10.6771 0.881897L10.326 0.545898C10.0933 0.327454 9.73083 0.327454 9.49805 0.545898L5.49805 4.37289Z" fill=" #5E6477"/>
+                        </svg>
+                    </a>
+                    <a class="nav-links" href="#">
+                        Информация 
+                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49805 4.37289L1.49304 0.540894C1.26007 0.322952 0.89801 0.322952 0.665039 0.540894L0.314087 0.8769C0.204956 0.979691 0.143066 1.12297 0.143066 1.2729C0.143066 1.42282 0.204956 1.5661 0.314087 1.6689L5.08209 6.2319C5.31622 6.44975 5.67889 6.44975 5.91309 6.2319L10.6771 1.6739C10.7862 1.57111 10.8481 1.42783 10.8481 1.2779C10.8481 1.12798 10.7862 0.984695 10.6771 0.881897L10.326 0.545898C10.0933 0.327454 9.73083 0.327454 9.49805 0.545898L5.49805 4.37289Z" fill=" #5E6477"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="header-login">
+                    <div ><a class="header-login-text" href="login/login.html">Войти</a></div>
+                    <div class="header-login-btn"><button id="signup-btn" class="header-btn">Зарегистрироваться</button></div>
+                </div>
+
+                <div id="nav-toggle" class="header__burger">
+                    <span></span>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="section registration">
+        <div class="container">
+
+            <h4 class="signup-text">Регистрация</h4>
+
+            <div class="signup-forms">
+
+                <form class="form" action="process_form.php" method="POST">
+                    <div class="input-container">
+                        <label for="login" class="login">Введите ваш логин</label>
+                        <input class="input-login" type="text" id="login" name="login" required>
+                        <img src="images/user.svg" alt="">
+                    </div>
+                </form>
+
+                <form class="form" action="process_form.php" method="POST">
+                    <div class="input-container">
+                        <label for="name" class="login">Введите ваше имя</label>
+                        <input class="input-name" type="name" id="name" name="name" required>
+                        <img class="add-at-icon" src="images/mask.svg" alt="">
+                    </div>
+                </form>
+
+                <form class="form" action="process_form.php" method="POST">
+                    <div class="input-container">
+                        <label for="name" class="login">Введите ваш пароль</label>
+                        <input class="input-password"show-password-icon type="password" id="password" name="password" required>
+                        <img class="show-password-icon" src="images/key.svg" alt="">
+                    </div>
+                </form>
+
+                <form class="form" action="process_form.php" method="POST">
+                    <div class="input-container">
+                        <label for="name" class="login">Введите ваше ключевое слово</label>
+                        <input class="input-password"show-password-icon type="password" id="password" name="password" required>
+                        <img class="show-password-icon" src="images/shield.svg" alt="">
+                    </div>
+                </form>
+
+                <button class="signup-btn">Зарегистрироваться</button>
+
+            </div>
+        </div>
+    </section>
+
+    <h3 class="haveaccount-text"><a href="login/login.html" class="login-text">Уже зарегестрированы?</a></h3>
+
+    <img src="images/bg.png" alt="background" class="background-img">
+
+    </div>
+
+    <script src="js/script.js" ></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
