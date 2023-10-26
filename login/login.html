@@ -75,17 +75,27 @@
                     </div>
                 </form>
 
-                <button class="signup-btn">Войти</button>
+                <button id="popup-open" class="signup-btn">Войти</button>
 
             </div>
         </div>
     </section>
 
+    <div class="popup" id="popup">
+        <div class="popup-container">
+            <div class="popup-body">
+                <div id="popup-close" class="popup-close"></div>
+                <h1 class="popup-title">Временно недоступно, введутся технические работы!</h1>
+                <img width="50" height="50" src="https://www.svgrepo.com/show/474272/warning-circle.svg" alt="warning" style="display: block;margin: 0 auto;">
+            </div>
+        </div>
+    </div>
+
     <img src="../images/bg.png" alt="background" class="background-img">
 
     </div>
 
-    <script src="../js/script.js" ></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

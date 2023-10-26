@@ -1,29 +1,21 @@
 
-const passwordInput = document.getElementById("password");
-const showPasswordImg = document.querySelector(".show-password-icon");
+document.getElementById("signup-btn").addEventListener("click", function() {
 
-let showPassword = false; 
-
-showPasswordImg.addEventListener("mousedown", function() {
-    showPassword = true;
-    passwordInput.type = "text";
-});
-
-document.addEventListener("mouseup", function() {
-    if(showPassword) {
-        setTimeout(function(){
-            passwordInput.type = "password";
-            showPassword = false;
-        }, 100); 
-    }
+    window.location.href = "../signup.html";
 });
 
 
-const emailInput = document.getElementById("email");
-const addAtIcon = document.querySelector(".add-at-icon");
+const headerBurger = document.getElementById('nav-toggle');
 
-addAtIcon.addEventListener("click", function() {
-    emailInput.value += "@";
+headerBurger.addEventListener('click', () => {
+  headerBurger.classList.toggle('active');
+});
+
+const navToggle = document.getElementById('nav-toggle');
+const nav = document.getElementById('nav');
+
+navToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });
 
 
@@ -31,7 +23,7 @@ const signupButton = document.querySelector(".signup-btn");
 
 signupButton.addEventListener("click", function() {
     const loginInput = document.getElementById("login");
-    const emailInput = document.getElementById("name");
+    const nameInput = document.getElementById("name");
     const passwordInput = document.getElementById("password");
 
     if (!loginInput.value) {
@@ -40,10 +32,10 @@ signupButton.addEventListener("click", function() {
         loginInput.style.borderBottomColor = "";
     }
 
-    if (!emailInput.value) {
-        emailInput.style.borderBottomColor = "red";
+    if (!nameInput.value) {
+        nameInput.style.borderBottomColor = "red";
     } else {
-        emailInput.style.borderBottomColor = "";
+        nameInput.style.borderBottomColor = "";
     }
 
     if (!passwordInput.value) {
@@ -52,8 +44,23 @@ signupButton.addEventListener("click", function() {
         passwordInput.style.borderBottomColor = "";
     }
 
-    if (loginInput.value && emailInput.value && passwordInput.value) {
-        window.location.href = "index.html"; 
+    if (loginInput.value && nameInput.value && passwordInput.value) {
+        openPopUp.click();
     }
 });
 
+
+
+const openPopUp = document.getElementById("popup-open");
+
+const closePopUp =  document.getElementById("popup-close");
+const PopUp = document.getElementById("popup");
+
+openPopUp.addEventListener('click', function(e) {
+    e.preventDefault();
+    PopUp.classList.add('active');
+});
+
+closePopUp.addEventListener('click', () => {
+    PopUp.classList.remove('active');
+});
